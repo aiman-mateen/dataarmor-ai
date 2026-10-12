@@ -1,3 +1,5 @@
+import os
+
 import joblib
 import numpy as np
 import pandas as pd
@@ -8,7 +10,7 @@ from feature_extractor import extract_features_for_inference, preprocess_for_mod
 # MODEL PATHS
 # =============================================================================
 
-MODEL_DIR = r"D:\FYP\DataArmor_Backend\models"
+MODEL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models")
 
 MODELS = {
     "CatBoost":           f"{MODEL_DIR}\\catboost_model.pkl",
