@@ -12,28 +12,30 @@ from feature_extractor import extract_features_for_inference, preprocess_for_mod
 
 MODEL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models")
 
+
 MODELS = {
-    "CatBoost":           f"{MODEL_DIR}\\catboost_model.pkl",
-    "XGBoost":            f"{MODEL_DIR}\\xgboost_model.pkl",
-    "LightGBM":           f"{MODEL_DIR}\\lightgbm_model.pkl",
-    "MLP":                f"{MODEL_DIR}\\mlp_model.pkl",
-    "RandomForest":       f"{MODEL_DIR}\\rf_model.pkl",
-    "LogisticRegression": f"{MODEL_DIR}\\logistic_model.pkl",
+    "CatBoost": os.path.join(MODEL_DIR, "catboost_model.pkl"),
+    "XGBoost": os.path.join(MODEL_DIR, "xgboost_model.pkl"),
+    "LightGBM": os.path.join(MODEL_DIR, "lightgbm_model.pkl"),
+    "MLP": os.path.join(MODEL_DIR, "mlp_model.pkl"),
+    "RandomForest": os.path.join(MODEL_DIR, "rf_model.pkl"),
+    "LogisticRegression": os.path.join(MODEL_DIR, "logistic_model.pkl"),
 }
 
 ENCODERS = {
-    "CatBoost":           f"{MODEL_DIR}\\catboost_encoder.pkl",
-    "XGBoost":            f"{MODEL_DIR}\\xgboost_encoder.pkl",
-    "LightGBM":           f"{MODEL_DIR}\\lightgbm_encoder.pkl",
-    "MLP":                f"{MODEL_DIR}\\mlp_encoder.pkl",
-    "RandomForest":       f"{MODEL_DIR}\\rf_encoder.pkl",
-    "LogisticRegression": f"{MODEL_DIR}\\logistic_encoder.pkl",
+    "CatBoost": os.path.join(MODEL_DIR, "catboost_encoder.pkl"),
+    "XGBoost": os.path.join(MODEL_DIR, "xgboost_encoder.pkl"),
+    "LightGBM": os.path.join(MODEL_DIR, "lightgbm_encoder.pkl"),
+    "MLP": os.path.join(MODEL_DIR, "mlp_encoder.pkl"),
+    "RandomForest": os.path.join(MODEL_DIR, "rf_encoder.pkl"),
+    "LogisticRegression": os.path.join(MODEL_DIR, "logistic_encoder.pkl"),
 }
 
 SCALERS = {
-    "MLP":                f"{MODEL_DIR}\\mlp_scaler.pkl",
-    "LogisticRegression": f"{MODEL_DIR}\\logistic_scaler.pkl",
+    "MLP": os.path.join(MODEL_DIR, "mlp_scaler.pkl"),
+    "LogisticRegression": os.path.join(MODEL_DIR, "logistic_scaler.pkl"),
 }
+
 
 # =============================================================================
 # LOAD ALL MODELS
